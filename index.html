@@ -1,12 +1,134 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Droniarz</title>
-  </head>
-  <body>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="portfolio, fullstack, webdev">
+  <meta name="author" content="Dominika Duralek">
+  <link rel="icon" type="image/svg+xml" href="" />
+
+  <title>Droniarz</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <ul class="header__menu">
+        <li><a class="header__link" href="#gallery">Galeria</a></li>
+        <li class="header__line"></li>
+        <li><a class="header__link" href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container">
+      <div class="hero__overlay"></div>
+      <img src="public/logo.png" alt="logo" class="hero__logo" />
+      <h1 class="hero__title">droniarz</h1>
+      <h2 class="hero__subtitle">fotki z drona</h2>
+    </section>
+    <section id="gallery" class="gallery container">
+      <h1 class="gallery__title">Galeria</h1>
+
+      <div class="gallery__item">
+        <h2 class="gallery__item__title">zdjecia 1</h2>
+        <div class="gallery__slider">
+
+            <div class="mySlides1">
+              <img src="public/testphoto.JPG" style="width:100%" class="slider__image">
+            </div>
+          
+            <div class="mySlides1">
+              <img src="public/testphoto2.jpg" style="width:100%" class="slider__image">
+            </div>
+          
+            <div class="mySlides1">
+              <img src="public/testphoto3.jpg" style="width:100%" class="slider__image">
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <h2 class="gallery__item__title">zdjecia 2</h2>
+        <div class="gallery__slider">
+
+            <div class="mySlides2">
+              <img src="public/testphoto.JPG" style="width:100%" class="slider__image">
+            </div>
+          
+            <div class="mySlides2">
+              <img src="public/testphoto2.jpg" style="width:100%" class="slider__image">
+            </div>
+          
+            <div class="mySlides2">
+              <img src="public/testphoto3.jpg" style="width:100%" class="slider__image">
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <h2 class="gallery__item__title">zdjecia 3</h2>
+        <div class="gallery__slider">
+
+            <div class="mySlides3">
+              <img src="public/testphoto.JPG" style="width:100%" class="slider__image">
+            </div>
+          
+            <div class="mySlides3">
+              <img src="public/testphoto2.jpg" style="width:100%" class="slider__image">
+            </div>
+          
+            <div class="mySlides3">
+              <img src="public/testphoto3.jpg" style="width:100%" class="slider__image">
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+
+        </div>
+      </div>
+
+    </section>
+    <section id="contact" class="contact container">
+      contact
+    </section>
+  </main>
+  <footer class="footer container">
+    footer
+  </footer>
+
+  <script>
+    let slideIndex = [1,1];
+    let slideId = ["mySlides1", "mySlides2", "mySlides3"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 2}    
+      if (n < 2) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
