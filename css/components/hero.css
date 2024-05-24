@@ -1,27 +1,18 @@
 .hero {
+    background-color: var(--color-light);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url('../../public/testphoto.JPG');
     background-size:cover;
     background-repeat: no-repeat;
-    gap: 1rem;
     min-height: 40rem;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .hero__logo {
     width: var(--size-12xl);
     height: var(--size-12xl);
-}
-
-.hero__title {
-    font-size: var(--size-6xl);
-    color: white;
-}
-
-.hero__subtitle {
-    font-size: var(--size-3xl);
-    color: white;
+    padding: 6rem 20rem 6rem 20rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -29,3 +29,14 @@
     padding-right: 8rem;
     overflow: hidden;
 }
+
+.button {
+  background-color: var(--color-accent700);
+  color: var(--color-light);
+  transition: 0.5;
+}
+
+.button:hover {
+    background-color: var(--color-accent500);
+    transition: 0.5s;
+}

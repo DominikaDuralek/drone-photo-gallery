@@ -9,7 +9,9 @@
     position: sticky;
     top: 0;
     z-index: 99;
-    background-color: white;
+    background-color: var(--color-dark);
+
+    border-bottom: 2px var(--color-light2) solid;
 }
 
 .header__menu {
@@ -23,6 +25,19 @@
 }
 
 .header__line {
-    border: 1px solid black;
+    border: 1px solid var(--color-light);
     height: 1rem;
+}
+
+.header__dot {
+    font-size: var(--size-l);
+}
+
+.header__link {
+    transition: 0.5s;
+}
+
+.header__link:hover {
+    color: var(--color-accent400);
+    transition: 0.5s;
 }
