@@ -1,2 +1,2 @@
 ﻿# drone-photo-gallery
-[wip]
+- A responsive photo gallery for a photographer and drone user.
